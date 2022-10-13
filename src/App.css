@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica neue", Helvetica, Arial,"Lucida Grande", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: blue;
+  padding: 20px;
+  color: greenyellow;
+  font-size: 300%;
+}
+
+
+h1 {
+  color: greenyellow;
+  font-family: Garamond, Baskerville, "Times New Roman",serif;
+}
+
+h1::after {
+  content: 'Feltman';
+  color:orange;
+  margin-left: 10px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 70%;
+} 
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  font-size: 50%;
+}
+
+nav a {
+  justify-content: space-between;
+  align-items: center;
+  color: greenyellow;
+  margin-inline: 50px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: lavender;
+  font-size: larger;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  
+}
+
+#left {
+  background-color: navy;
+  color:greenyellow;
+  width: 75%;
+}
+
+#left h2 {
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+#left section {
+  color:greenyellow;
+  text-align: center;
+}
+
+#left section img {
+  width: 300px;
+  height: 168px;
+}
+
+#left .grow:hover {
+  transform: rotate(15deg) scale(1.2);
+}
+
+#left section h3 {
+  text-align: center;
+  font-size: 25px;
+}
+
+
+aside {
+  background-color: greenyellow;
+  width:25%;
+  font-weight: bold;
+  color: black;
+}
+
+aside h2 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+aside section {
+  font-size:14px;
+  line-height: 1.6rem;
+  padding:40px;
+}
+
+aside #resume {
+  text-align: center;
+}
+
+aside img {
+  max-width: 100%;
+}
+
+
+footer {
+  display: flex;
+  background-color: blue;
+  color: greenyellow;
+  font-size: 17px;
+  padding: 10px;
+}
+
+footer h2 {
+  width: 20%;
+  font-size: 20px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-around;
+  color: greenyellow;
+  width: 200%;
+  align-items: center;
+}
+
+footer a {
+  color: greenyellow;
+}
+
+#work {
+  display: flex;
+  flex: 4;
+  background-color: (lavender);
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin: 0px 0px;
+}
+
+.grow {
+  flex-direction: column;
+  border-style: solid;
+  border-width: 5px;
+  padding: 10px;
+  margin: 32px;
+  flex: 0 0 300px;
+  border-radius: 25px;
+  background-color: purple;
+  box-shadow: 10px 5px 5px #13293d;
+}
+
+@media screen and (max-width: 1180px) {
+  header {
+      flex-direction: column;
+      align-items: initial;
+  }
+  nav {
+      display: block;
+      margin-top: 20px;
+  }
+  nav ul {
+      justify-content: left;
+  }
+  nav a {
+      margin-inline: 0;
+      margin-right:20px;
+  }
+
+  aside {
+      width: 30%;
+  }
+
+  #left {
+      width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+      flex-direction: column;
+  }
+
+  aside {
+      width: 100%;
+  }
+
+  #left {
+      width: 100%;
+  }
+
+  footer {
+      text-align: center;
+      flex-direction: column;
+  }
+  footer h2 {
+      width:100%;
+  }
+  footer ul {
+      width:100%;
+      flex-direction: column;
+  }
+}
