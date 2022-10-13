@@ -1,46 +1,38 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams,
-} from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import Project from "./components/project";
+import Contact from "./components/contact";
 
 function App() {
   return (
-      <div className="App">
-        <Header />
-        <main>
-          <Switch>
-            <Route exact path="/">
-              <About />
-            </Route>
-            <Route exact path="/projects">
-              <Projects />
-            </Route>
-            <Route exact path="/contact">
-              <Contact />
-            </Route>
-            <Route exact path="/resume">
-              <Resume />
-            </Route>
-          </Switch>
-        </main>
-        <Footer />
-      </div>
-
+    <div className="App">
+      <Header />
+      <main>
+        <Switch>
+          <Route exact path="/">
+            <About />
+          </Route>
+          <Route exact path="/projects">
+            <Projects />
+          </Route>
+          <Route exact path="/contact">
+            <Contact />
+          </Route>
+          <Route exact path="/resume">
+            <Resume />
+          </Route>
+        </Switch>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
 function About() {
-  console.log("about")
+  console.log("about");
   return (
     <section id="about-me">
       <h2>About Me!</h2>
@@ -61,7 +53,7 @@ function About() {
 }
 
 function Projects() {
-  console.log("projects")
+  console.log("projects");
   return (
     <section id="portfolio">
       <h2>Work</h2>
@@ -107,18 +99,24 @@ function Projects() {
   );
 }
 
-function Contact() {
-  console.log("contact")
-  return <section id="contact">Contact Form</section>;
-}
-
 function Resume() {
-  console.log("resume")
+  console.log("resume");
   return (
     <section id="resume">
       <h2>Resume</h2>
       <p>
-        <a href="./resume.pdf" target="_blank">View Resume</a>
+        <a href="./resume.pdf" target="_blank">
+          View Resume
+        </a>
+      </p>
+      <p>
+        <h3>Proficiencies</h3>
+        <ul>
+          <li>CSS</li>
+          <li>node.js</li>
+          <li>react</li>
+          <li>mongoDB</li>
+        </ul>
       </p>
     </section>
   );
