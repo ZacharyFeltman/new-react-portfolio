@@ -9,7 +9,7 @@ export default function Project(props) {
                   href={props.link}
                   target="_blank"
                 >
-                  <img src={props.image} alt={props.name} />
+                  <img className="project-image" src={props.image} alt={props.name} />
                 </a>
               </p>
               <p>

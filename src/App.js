@@ -37,7 +37,10 @@ function About() {
     <section id="about-me">
       <h2>About Me!</h2>
       <p>
-        <img src="./img/profile.jpg" alt="profile photo" />
+        <img
+          src={process.env.PUBLIC_URL + "/img/profile.jpg"}
+          alt="profile photo"
+        />
       </p>
       <p>
         Hello! My name is Zachary Feltman. I grew up in suburb of Chicago called
@@ -61,37 +64,37 @@ function Projects() {
         <Project
           name="Horiseon"
           link="https://zacharyfeltman.github.io/horiseon/"
-          image="./img/horiseon.png"
+          image={process.env.PUBLIC_URL + "/img/horiseon.png"}
           repo="https://github.com/ZacharyFeltman/horiseon"
         />
         <Project
           name="Middle-Where"
           link="https://limitless-temple-38712.herokuapp.com/?"
-          image="./img/map.jpeg"
+          image={process.env.PUBLIC_URL + "/img/map.jpeg"}
           repo="https://github.com/ZacharyFeltman/middleWhere"
         />
         <Project
           name="Pour Loser"
           link="https://zacharyfeltman.github.io/pour-loser-game/"
-          image="./img/pour-loser.png"
+          image={process.env.PUBLIC_URL + "/img/pour-loser.png"}
           repo="https://github.com/ZacharyFeltman/pour-loser-game"
         />
         <Project
           name="Note Taker"
           link="https://detailed-note-taker.herokuapp.com/"
-          image="./img/note-taker.png"
+          image={process.env.PUBLIC_URL + "/img/note-taker.png"}
           repo="https://github.com/ZacharyFeltman/detailed-note-taker"
         />
         <Project
           name="Weather Tracker"
           link="https://zacharyfeltman.github.io/weekly-weather-forecast/"
-          image="./img/weather.jpeg"
+          image={process.env.PUBLIC_URL + "/img/weather.jpeg"}
           repo="https://github.com/ZacharyFeltman/weekly-weather-forecast-1"
         />
         <Project
           name="Random Password Generator"
           link="https://zacharyfeltman.github.io/random-password/"
-          image="./img/random-password.png"
+          image={process.env.PUBLIC_URL + "/img/random-password.png"}
           repo="https://github.com/ZacharyFeltman/random-password"
         />
       </div>
@@ -105,7 +108,7 @@ function Resume() {
     <section id="resume">
       <h2>Resume</h2>
       <p>
-        <a href="./resume.pdf" target="_blank">
+        <a href={process.env.PUBLIC_URL +"/resume.pdf"} target="_blank">
           View Resume
         </a>
       </p>

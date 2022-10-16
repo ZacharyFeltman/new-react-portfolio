@@ -233,3 +233,7 @@ footer a {
       flex-direction: column;
   }
 }
+
+.project-image {
+  max-width: 250px;
+}
