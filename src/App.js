@@ -12,16 +12,16 @@ function App() {
       <Header />
       <main>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/react-portfolio">
             <About />
           </Route>
-          <Route exact path="/projects">
+          <Route exact path="/react-portfolio/projects">
             <Projects />
           </Route>
-          <Route exact path="/contact">
+          <Route exact path="/react-portfolio/contact">
             <Contact />
           </Route>
-          <Route exact path="/resume">
+          <Route exact path="/react-portfolio/resume">
             <Resume />
           </Route>
         </Switch>
