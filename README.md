@@ -18,4 +18,5 @@ https://zacharyfeltman.github.io/react-portfolio/
 
 ## Screenshot
 
-![screenshot](Screenshot)
+
+![screenshot](./Screenshot.png)
