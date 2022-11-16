@@ -14,26 +14,36 @@ class Contact extends React.Component {
     return (
       <section id="contact">
         <h2 Contact Form></h2>
-        <label>name</label>
-        <input
-          type="text"
-          value={this.state.name}
-          placeholder="name"
-          onChange={this.handleNameChange}
-          onBlur={this.handleNotBlank}
-        ></input>
-        <label>email</label>
-        <input
-          type="text"
-          value={this.state.email}
-          placeholder="email"
-          onChange={this.handleEmailChange}
-          onBlur={this.handleValideEmail}
-        ></input>
-        <label>message</label>
-        <textarea placeholder="message" onChange={this.handleMessageChange} onBlur={this.handleNotBlank}>
-          {this.state.message}
-        </textarea>
+        <div class="name-contact">
+          <label>name</label>
+          <input
+            type="text"
+            value={this.state.name}
+            placeholder="name"
+            onChange={this.handleNameChange}
+            onBlur={this.handleNotBlank}
+          ></input>
+        </div>
+        <div class="email-contact">
+          <label>email</label>
+          <input
+            type="text"
+            value={this.state.email}
+            placeholder="email"
+            onChange={this.handleEmailChange}
+            onBlur={this.handleValideEmail}
+          ></input>
+        </div>
+        <div class="message-contact">
+          <label>message</label>
+          <textarea
+            placeholder="message"
+            onChange={this.handleMessageChange}
+            onBlur={this.handleNotBlank}
+          >
+            {this.state.message}
+          </textarea>
+        </div>
       </section>
     );
   }
@@ -57,15 +67,14 @@ class Contact extends React.Component {
   };
 
   handleNotBlank = (event) => {
-    if (event.target.value === '')
-        alert ("This field can not be blank")
-  }
+    if (event.target.value === "") alert("This field can not be blank");
+  };
 
   handleValideEmail = (event) => {
-    let validEmailRegex = /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/
+    let validEmailRegex = /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/;
     if (!validEmailRegex.test(event.target.value))
-        alert ("email entered is not valid")
-  }
+      alert("email entered is not valid");
+  };
 }
 
 export default Contact;
