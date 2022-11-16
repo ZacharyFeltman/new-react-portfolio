@@ -34,23 +34,28 @@ function App() {
 function About() {
   console.log("about");
   return (
-    <section id="about-me">
-      <h2>About Me!</h2>
-      <p>
-        <img
-          src={process.env.PUBLIC_URL + "/img/profile.jpg"}
-          alt="profile photo"
-        />
-      </p>
-      <p>
-        Hello! My name is Zachary Feltman. I grew up in suburb of Chicago called
-        Buffalo Grove and moved to Colorado in 2013. I graduated from The
-        University of Illinois with a bachelors in Psychology and a minor in
-        Cinema Studies. I moved to Colorado for an internship in Music
-        Management, where I worked as an agent assistant. I have been in the
-        service industry for the last 15 years and was ready for a change. I am
-        excited to learn to code and build my portfolio through this class.
-      </p>
+    <section class="about-me">
+      <h2 class="animate-character">
+        It's me...Zach Feltman. Your friendly neighborhood web developer.
+      </h2>
+      <section class="about-text-photo">
+        <p>
+          <img
+            id="about-image"
+            src={process.env.PUBLIC_URL + "/img/profile.jpg"}
+            alt="profile photo"
+          />
+        </p>
+        <p id="about-text">
+          Hello! My name is Zachary Feltman. I grew up in suburb of Chicago
+          called Buffalo Grove and moved to Colorado in 2013. I graduated from
+          The University of Illinois with a bachelors in Psychology and a minor
+          in Cinema Studies. I moved to Colorado for an internship in Music
+          Management, where I worked as an agent assistant. I have been in the
+          service industry for the last 15 years and was ready for a change. I
+          am excited to learn to code and build my portfolio through this class.
+        </p>
+      </section>
     </section>
   );
 }
@@ -108,7 +113,7 @@ function Resume() {
     <section id="resume">
       <h2>Resume</h2>
       <p>
-        <a href={process.env.PUBLIC_URL +"/resume.pdf"} target="_blank">
+        <a href={process.env.PUBLIC_URL + "/resume.pdf"} target="_blank">
           View Resume
         </a>
       </p>

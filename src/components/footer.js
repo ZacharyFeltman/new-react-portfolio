@@ -3,22 +3,29 @@ import React from "react";
 export default function Footer() {
   return (
     <footer id="contact-me">
-      <h2>Contact Me:</h2>
+      {/* <h2>Contact Me:</h2> */}
       <ul>
         <li>
-          Email:
+          {/* Email: */}
           <a href="mailto:Zachary.Feltman@gmail.com">
-            Zachary.Feltman@gmail.com
+            {/* Zachary.Feltman@gmail.com */}
+            <i class="fa-solid fa-envelope fa-5x"></i>
           </a>
         </li>
-        <li>Phone Number: 847-636-1461</li>
         <li>
-          GitHub:{" "}
+        <i class="fa-brands fa-linkedin fa-5x"></i>
+        </li>
+        <li>Phone Number: 847-636-1461
+        <i class="fa-solid fa-square-phone fa-5x"></i>
+        </li>
+        <li>
+          {/* GitHub:{" "} */}
           <a
             href="https://github.com/ZacharyFeltman?tab=repositories"
             target="_blank"
           >
-            GitHub
+            {/* GitHub */}
+            <i class="fa-brands fa-square-github fa-5x"></i>
           </a>
         </li>
       </ul>
