@@ -209,6 +209,34 @@ aside img {
   max-width: 100%;
 }
 
+#resume-title {
+  color: lime
+}
+
+#resume {
+  width: 65%;
+}
+
+.resume-profs {
+  display: flex;
+  flex-direction: block;
+  width: 100%;
+}
+
+.listStyle {
+  list-style: none;
+}
+
+.logoSize {
+  height: 25px;
+  width: 25px;
+}
+
+.profs {
+  color: limegreen;
+  width: 25%;
+}
+
 #title-text {
   font-family: 'Paytone One', sans-serif;
   font-size: 75px;
@@ -228,18 +256,6 @@ aside img {
   line-height: 95px;
   color: white;
 }
-
-/* .name-contact {
-  margin: 20px;
-}
-
-.email-contact {
-  margin: 20px;
-}
-
-.message-contact {
-  margin: 20px;
-} */
 
 textarea {
   height: 200px;

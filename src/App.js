@@ -110,20 +110,27 @@ function Projects() {
 function Resume() {
   console.log("resume");
   return (
-    <section id="resume">
-      <h2>Resume</h2>
-      <p>
+    <section class="resume-profs">
+      <h2 id="resume-title">Resume</h2>
+      <p id="resume">
         <a href={process.env.PUBLIC_URL + "/resume.pdf"} target="_blank">
           View Resume
         </a>
       </p>
-      <p>
+      <p class="profs">
         <h3>Proficiencies</h3>
-        <ul>
-          <li>CSS</li>
-          <li>node.js</li>
-          <li>react</li>
-          <li>mongoDB</li>
+        <ul class="listStyle">
+          <li>
+            <i class="fa-brands fa-css3-alt fa-5x"></i>
+          </li>
+          <li>
+            <i class="fa-brands fa-node fa-5x"></i>
+          </li>
+          <li>
+            <i class="fa-brands fa-react fa-5x"></i>
+          </li>
+          <li>MongoDB</li>
+          <li>MySQL</li>
         </ul>
       </p>
     </section>
