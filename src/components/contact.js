@@ -13,9 +13,9 @@ class Contact extends React.Component {
   render() {
     return (
       <section id="contact">
-        <h2 Contact Form></h2>
+        <h2 Contact Form id="title-text">Reach Out!</h2>
         <div class="name-contact">
-          <label>name</label>
+          {/* <label>name</label> */}
           <input
             type="text"
             value={this.state.name}
@@ -25,7 +25,7 @@ class Contact extends React.Component {
           ></input>
         </div>
         <div class="email-contact">
-          <label>email</label>
+          {/* <label>email</label> */}
           <input
             type="text"
             value={this.state.email}
@@ -35,8 +35,9 @@ class Contact extends React.Component {
           ></input>
         </div>
         <div class="message-contact">
-          <label>message</label>
+          {/* <label>message</label> */}
           <textarea
+            // type="text"
             placeholder="message"
             onChange={this.handleMessageChange}
             onBlur={this.handleNotBlank}

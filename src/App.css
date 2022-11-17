@@ -209,13 +209,55 @@ aside img {
   max-width: 100%;
 }
 
+#title-text {
+  font-family: 'Paytone One', sans-serif;
+  font-size: 75px;
+  background: -webkit-linear-gradient(rgb(179, 95, 218), rgb(22, 11, 175));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+  margin-top: -5px;
+}
+
 #contact {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 50%;
-  background-color: red;
   margin-left: 330px;
+  line-height: 95px;
+  color: white;
+}
+
+.name-contact {
+  margin: 20px;
+  background-color: gray;
+}
+
+.email-contact {
+  margin: 20px;
+}
+
+.message-contact {
+  margin: 20px;
+}
+
+textarea {
+  height: 200px;
+  width: 450px;
+  margin-top: 15px;
+  border: solid, green;
+}
+
+input {
+  height: 60px;
+  width: 450px;
+}
+
+label {
+  display: block;
+  margin-bottom: -30px;
+  font-size: 30px;
 }
 
 
