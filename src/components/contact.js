@@ -45,6 +45,7 @@ class Contact extends React.Component {
             {this.state.message}
           </textarea>
         </div>
+        <button type="submit" class="submitBtn"><i class="fa-solid fa-handshake" id="handShake"><span>Say Hi!</span></i></button>
       </section>
     );
   }

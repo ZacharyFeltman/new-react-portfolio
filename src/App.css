@@ -229,9 +229,8 @@ aside img {
   color: white;
 }
 
-.name-contact {
+/* .name-contact {
   margin: 20px;
-  background-color: gray;
 }
 
 .email-contact {
@@ -240,18 +239,27 @@ aside img {
 
 .message-contact {
   margin: 20px;
-}
+} */
 
 textarea {
   height: 200px;
   width: 450px;
   margin-top: 15px;
-  border: solid, green;
+  border: solid;
+  border-color: purple;
+  border-width: 10px;
+  background-color: gainsboro;
+  color: black;
 }
 
 input {
   height: 60px;
   width: 450px;
+  border: solid;
+  border-color: purple;
+  border-width: 10px;
+  background-color: gainsboro;
+  color: black;
 }
 
 label {
@@ -260,6 +268,29 @@ label {
   font-size: 30px;
 }
 
+.submitBtn {
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    font-size: 40px;
+    color: limegreen;
+    background-color: black;
+    border: solid;
+}
+
+.submitBtn:hover {
+  color: black !important;
+  background-color: limegreen !important;
+  border: solid;
+}
+
+span {
+  margin-left: 15px;
+}
 
 footer {
   display: flex;
