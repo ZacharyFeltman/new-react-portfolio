@@ -113,6 +113,7 @@ function Resume() {
     <section class="resume-profs">
       <h2 id="resume-title">Resume</h2>
       <p id="resume">
+        <iframe src={process.env.PUBLIC_URL + "/resume.pdf"} />
         <a href={process.env.PUBLIC_URL + "/resume.pdf"} target="_blank">
           View Resume
         </a>
