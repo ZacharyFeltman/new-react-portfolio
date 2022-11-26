@@ -102,9 +102,10 @@ class Contact extends React.Component {
     let validEmailRegex = /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/;
     if (!validEmailRegex.test(event.target.value))
       alert("email entered is not valid");
-  };
-
-  contactFormSubmit() {
+    };
+    
+    contactFormSubmit() {
+    this.state.hasSubmitted = true;
     const request = mailjet.post("send", { version: "v3.1" }).request({
       Messages: [
         {
@@ -136,7 +137,6 @@ class Contact extends React.Component {
       .catch((err) => {
         console.log(err.statusCode);
       });
-    this.state.hasSubmitted = true;
   }
 }
 
