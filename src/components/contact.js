@@ -102,8 +102,8 @@ class Contact extends React.Component {
       Messages: [
         {
           From: {
-            Email: this.state.email,
-            Name: this.state.name,
+            Email: "zachary.feltman@gmail.com",
+            Name: "Zach Feltman",
           },
           To: [
             {
@@ -112,7 +112,7 @@ class Contact extends React.Component {
             },
           ],
           Subject: "Portfolio Contact Submission",
-          TextPart: this.state.message,
+          TextPart: this.state.name + "\n" + this.state.email + "\n" + this.state.message,
           CustomID: "AppGettingStartedTest",
         },
       ],
