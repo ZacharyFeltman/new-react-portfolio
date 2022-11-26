@@ -16,57 +16,64 @@ class Contact extends React.Component {
       name: "",
       email: "",
       message: "",
+      hasSubmitted: false,
     };
     this.contactFormSubmit = this.contactFormSubmit.bind(this);
   }
   render() {
-    return (
-      <section id="contact">
-        <h2 Contact Form id="title-text">
-          Reach Out!
-        </h2>
-        <div class="name-contact">
-          {/* <label>name</label> */}
-          <input
-            type="text"
-            value={this.state.name}
-            placeholder="name"
-            onChange={this.handleNameChange}
-            onBlur={this.handleNotBlank}
-          ></input>
-        </div>
-        <div class="email-contact">
-          {/* <label>email</label> */}
-          <input
-            type="text"
-            value={this.state.email}
-            placeholder="email"
-            onChange={this.handleEmailChange}
-            onBlur={this.handleValideEmail}
-          ></input>
-        </div>
-        <div class="message-contact">
-          {/* <label>message</label> */}
-          <textarea
-            // type="text"
-            placeholder="message"
-            onChange={this.handleMessageChange}
-            onBlur={this.handleNotBlank}
+    if (this.state.hasSubmitted) {
+      return (
+        <section id="contact">
+          <h2 id="title-text">Your message has been sent</h2>
+        </section>
+      );
+    } else {
+      return (
+        <section id="contact">
+          <h2 id="title-text">Reach Out!</h2>
+          <div class="name-contact">
+            {/* <label>name</label> */}
+            <input
+              type="text"
+              value={this.state.name}
+              placeholder="name"
+              onChange={this.handleNameChange}
+              onBlur={this.handleNotBlank}
+            ></input>
+          </div>
+          <div class="email-contact">
+            {/* <label>email</label> */}
+            <input
+              type="text"
+              value={this.state.email}
+              placeholder="email"
+              onChange={this.handleEmailChange}
+              onBlur={this.handleValideEmail}
+            ></input>
+          </div>
+          <div class="message-contact">
+            {/* <label>message</label> */}
+            <textarea
+              // type="text"
+              placeholder="message"
+              onChange={this.handleMessageChange}
+              onBlur={this.handleNotBlank}
+            >
+              {this.state.message}
+            </textarea>
+          </div>
+          <button
+            type="submit"
+            class="submitBtn"
+            onClick={this.contactFormSubmit}
           >
-            {this.state.message}
-          </textarea>
-        </div>
-        <button
-          type="submit"
-          class="submitBtn"
-          onClick={this.contactFormSubmit}
-        >
-          <i class="fa-solid fa-handshake" id="handShake">
-            <span>Say Hi!</span>
-          </i>
-        </button>
-      </section>
-    );
+            <i class="fa-solid fa-handshake" id="handShake">
+              <span>Say Hi!</span>
+            </i>
+          </button>
+        </section>
+      );
+    }
   }
 
   handleNameChange = (event) => {
@@ -112,7 +119,12 @@ class Contact extends React.Component {
             },
           ],
           Subject: "Portfolio Contact Submission",
-          TextPart: this.state.name + "\n" + this.state.email + "\n" + this.state.message,
+          TextPart:
+            this.state.name +
+            "\n" +
+            this.state.email +
+            "\n" +
+            this.state.message,
           CustomID: "AppGettingStartedTest",
         },
       ],
@@ -124,7 +136,7 @@ class Contact extends React.Component {
       .catch((err) => {
         console.log(err.statusCode);
       });
-    console.log("here");
+    this.state.hasSubmitted = true;
   }
 }
 
