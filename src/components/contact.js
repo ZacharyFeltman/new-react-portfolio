@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import React from "react";
+import React,{ useState } from "react";
 import MailJet, { SendEmailV3_1 } from "node-mailjet";
 
 const MAILJET_PUBLIC_KEY = "08ccd57c4fbd84e1c60835b524b2f68d";
@@ -105,7 +105,12 @@ class Contact extends React.Component {
     };
     
     contactFormSubmit() {
-    this.state.hasSubmitted = true;
+    this.setState (
+      (state) => {
+        return {hasSubmitted: true}
+      }
+    )
+    console.log(this.state.hasSubmitted)
     const request = mailjet.post("send", { version: "v3.1" }).request({
       Messages: [
         {
