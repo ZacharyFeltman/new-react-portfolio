@@ -1,5 +1,13 @@
 import { render } from "@testing-library/react";
 import React from "react";
+import MailJet, { SendEmailV3_1 } from "node-mailjet";
+
+const MAILJET_PUBLIC_KEY = "08ccd57c4fbd84e1c60835b524b2f68d";
+const MAILJET_PRIVATE_KEY = "3287728de77400b0b9dd57d63a911c75";
+const mailjet = new MailJet({
+  apiKey: MAILJET_PUBLIC_KEY,
+  apiSecret: MAILJET_PRIVATE_KEY,
+});
 
 class Contact extends React.Component {
   constructor(props) {
@@ -9,11 +17,14 @@ class Contact extends React.Component {
       email: "",
       message: "",
     };
+    this.contactFormSubmit = this.contactFormSubmit.bind(this);
   }
   render() {
     return (
       <section id="contact">
-        <h2 Contact Form id="title-text">Reach Out!</h2>
+        <h2 Contact Form id="title-text">
+          Reach Out!
+        </h2>
         <div class="name-contact">
           {/* <label>name</label> */}
           <input
@@ -45,7 +56,15 @@ class Contact extends React.Component {
             {this.state.message}
           </textarea>
         </div>
-        <button type="submit" class="submitBtn"><i class="fa-solid fa-handshake" id="handShake"><span>Say Hi!</span></i></button>
+        <button
+          type="submit"
+          class="submitBtn"
+          onClick={this.contactFormSubmit}
+        >
+          <i class="fa-solid fa-handshake" id="handShake">
+            <span>Say Hi!</span>
+          </i>
+        </button>
       </section>
     );
   }
@@ -77,6 +96,36 @@ class Contact extends React.Component {
     if (!validEmailRegex.test(event.target.value))
       alert("email entered is not valid");
   };
+
+  contactFormSubmit() {
+    const request = mailjet.post("send", { version: "v3.1" }).request({
+      Messages: [
+        {
+          From: {
+            Email: this.state.email,
+            Name: this.state.name,
+          },
+          To: [
+            {
+              Email: "zachary.feltman@gmail.com",
+              Name: "Zachary",
+            },
+          ],
+          Subject: "Portfolio Contact Submission",
+          TextPart: this.state.message,
+          CustomID: "AppGettingStartedTest",
+        },
+      ],
+    });
+    request
+      .then((result) => {
+        console.log(result.body);
+      })
+      .catch((err) => {
+        console.log(err.statusCode);
+      });
+    console.log("here");
+  }
 }
 
 export default Contact;
