@@ -121,7 +121,8 @@ class Contact extends React.Component {
         method: 'POST',
         body: formData,
         headers: {
-          'Content-Type': 'text/html'
+          'Accept': 'text/html'
+          'Content-Type': 'application/json'
         }
       }
     )
