@@ -115,7 +115,7 @@ class Contact extends React.Component {
       Messages: [
         {
           From: {
-            Email: "zachary.feltman@gmail.com",
+            Email: "zach@zachfeltman.com",
             Name: "Zach Feltman",
           },
           To: [

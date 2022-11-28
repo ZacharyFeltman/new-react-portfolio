@@ -6,16 +6,16 @@ export default function Nav() {
     <nav>
       <ul>
         <li>
-          <NavLink exact to="/react-portfolio">About Me</NavLink>
+          <NavLink exact to="/">About Me</NavLink>
         </li>
         <li>
-          <NavLink  to="/react-portfolio/projects">Work</NavLink>
+          <NavLink  to="/projects">Work</NavLink>
         </li>
         <li>
-          <NavLink to="/react-portfolio/resume">Resume</NavLink>
+          <NavLink to="/resume">Resume</NavLink>
         </li>
         <li>
-          <NavLink to="/react-portfolio/contact">Contact Me</NavLink>
+          <NavLink to="/contact">Contact Me</NavLink>
         </li>
       </ul>
     </nav>
