@@ -110,7 +110,21 @@ class Contact extends React.Component {
         return {hasSubmitted: true}
       }
     )
-    console.log(this.state.hasSubmitted)
+    fetch(
+      "/send_email.php", 
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          name: this.state.name,
+          email: this.state.email,
+          message: this.state.message,
+        }),
+        headers: {
+          'Content-Type': 'applications/json'
+        }
+      }
+    )
+    /*console.log(this.state.hasSubmitted)
     const request = mailjet.post("send", { version: "v3.1" }).request({
       Messages: [
         {
@@ -142,6 +156,7 @@ class Contact extends React.Component {
       .catch((err) => {
         console.log(err.statusCode);
       });
+      */
   }
 }
 
