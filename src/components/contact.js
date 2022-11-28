@@ -120,7 +120,7 @@ class Contact extends React.Component {
           message: this.state.message,
         }),
         headers: {
-          'Content-Type': 'application/json; charset=utf-8'
+          'Content-Type': 'text/html'
         }
       }
     )
