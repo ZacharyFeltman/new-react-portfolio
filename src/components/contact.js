@@ -111,17 +111,23 @@ class Contact extends React.Component {
       }
     )
     console.log(this.state)
+    /*
     let formData = new FormData()
     formData.append('name', this.state.name)
     formData.append('email', this.state.email)
     formData.append('message', this.state.message)
+    */
     fetch(
       "/send_email.php", 
       {
         method: 'POST',
-        body: formData,
+        body: JSON.stringify({
+          name: this.state.name,
+          email: this.state.email,
+          message: this.state.message,
+        }),
         headers: {
-          'Accept': 'text/html'
+          'Accept': 'text/html',
           'Content-Type': 'application/json'
         }
       }
