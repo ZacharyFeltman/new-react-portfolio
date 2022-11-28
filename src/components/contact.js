@@ -118,19 +118,7 @@ class Contact extends React.Component {
     formData.append('message', this.state.message)
     */
     fetch(
-      "/send_email.php", 
-      {
-        method: 'POST',
-        body: JSON.stringify({
-          name: this.state.name,
-          email: this.state.email,
-          message: this.state.message,
-        }),
-        headers: {
-          'Accept': 'text/html',
-          'Content-Type': 'application/json'
-        }
-      }
+      "/send_email.php?name=" + this.state.name + "&email=" + this.state.email + "&message=" + this.state.message
     )
     /*console.log(this.state.hasSubmitted)
     const request = mailjet.post("send", { version: "v3.1" }).request({
