@@ -15,9 +15,6 @@ export default function Footer() {
         <li>
         <i class="fa-brands fa-linkedin fa-5x"></i>
         </li>
-        <li>Phone Number: 847-636-1461
-        <i class="fa-solid fa-square-phone fa-5x"></i>
-        </li>
         <li>
           {/* GitHub:{" "} */}
           <a

@@ -115,9 +115,9 @@ function Resume() {
       <h2 id="resume-title">Resume</h2>
       <p id="resume">
         <iframe src={process.env.PUBLIC_URL + "/resume.pdf"} />
-        <a href={process.env.PUBLIC_URL + "/resume.pdf"} target="_blank">
+        {/* <a href={process.env.PUBLIC_URL + "/resume.pdf"} target="_blank">
           View Resume
-        </a>
+        </a> */}
       </p>
       <p class="profs">
         <h3>Proficiencies</h3>
@@ -133,6 +133,7 @@ function Resume() {
           </li>
           <li>MongoDB</li>
           <li>MySQL</li>
+          <li><img src="/img/handlebars-js.jpg" alt="handlebars" /></li>
         </ul>
       </p>
     </section>

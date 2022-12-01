@@ -222,6 +222,11 @@ aside img {
   width: 65%;
 }
 
+iframe {
+  height: 115%;
+  width: 100%;
+}
+
 .resume-profs {
   display: flex;
   flex-direction: block;
