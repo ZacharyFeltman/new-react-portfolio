@@ -133,7 +133,7 @@ function Resume() {
           </li>
           <li>MongoDB</li>
           <li>MySQL</li>
-          <li><img src="/img/handlebars-js.jpg" alt="handlebars" /></li>
+          <li><img src="/img/handlebars-js.png" alt="handlebars" /></li>
         </ul>
       </p>
     </section>
