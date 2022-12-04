@@ -13,8 +13,7 @@ export default function Project(props) {
                 </a>
               </p>
               <p>
-                <a href={props.repo} target="_blank">
-                    GitHub
+                <a href={props.repo} target="_blank"><i class="fa-brands fa-square-github fa-2x"></i>
                 </a>
               </p>
             </section>
