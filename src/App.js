@@ -6,7 +6,6 @@ import Footer from "./components/footer";
 import Project from "./components/project";
 import Contact from "./components/contact";
 
-
 function App() {
   return (
     <div className="App">
@@ -112,30 +111,36 @@ function Resume() {
   console.log("resume");
   return (
     <section class="resume-profs">
-      <h2 id="resume-title">Resume</h2>
-      <p id="resume">
+      <div id="resume">
+        <h2 class="title">Resume</h2>
         <iframe src={process.env.PUBLIC_URL + "/resume.pdf"} />
         {/* <a href={process.env.PUBLIC_URL + "/resume.pdf"} target="_blank">
           View Resume
         </a> */}
-      </p>
-      <p class="profs">
-        <h3>Proficiencies</h3>
-        <ul class="listStyle">
-          <li>
-            <i class="fa-brands fa-css3-alt fa-5x"></i>
-          </li>
-          <li>
-            <i class="fa-brands fa-node fa-5x"></i>
-          </li>
-          <li>
-            <i class="fa-brands fa-react fa-5x"></i>
-          </li>
-          <li>MongoDB</li>
-          <li>MySQL</li>
-          <li><img src="/img/handlebars-js.png" alt="handlebars" /></li>
-        </ul>
-      </p>
+      </div>
+      <div class="profs">
+        <h2 class="title">Proficiencies</h2>
+        <div class="listStyle">
+          <div>
+            <i class="fa-brands fa-css3-alt fa-5x" title="css"></i>
+          </div>
+          <div>
+            <i class="fa-brands fa-node fa-5x" title="nodejs"></i>
+          </div>
+          <div>
+            <i class="fa-brands fa-react fa-5x" title="react"></i>
+          </div>
+          <div>
+            <img src="/img/mongodb.png" alt="mongodb" title="mongodb"/>
+          </div>
+          <div>
+            <img src="/img/mysql.png" alt="mysql" title="mysql" />
+          </div>
+          <div>
+            <img src="/img/handlebars-js.png" alt="handlebars" title="handlebars" />
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
