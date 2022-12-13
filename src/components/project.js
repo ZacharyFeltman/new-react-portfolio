@@ -16,6 +16,9 @@ export default function Project(props) {
                 <a href={props.repo} target="_blank"><i class="fa-brands fa-square-github fa-2x"></i>
                 </a>
               </p>
+              <p>
+                {props.info}
+              </p>
             </section>
     )
 }
