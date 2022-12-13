@@ -13,7 +13,12 @@ export default function Footer() {
           </a>
         </li>
         <li>
-        <i class="fa-brands fa-linkedin fa-5x"></i>
+          <a
+            href="https://linkedin.com/in/zachary-feltman-bb72a96b"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin fa-5x"></i>
+          </a>
         </li>
         <li>
           {/* GitHub:{" "} */}

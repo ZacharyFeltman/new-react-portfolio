@@ -352,6 +352,10 @@ footer a {
   color: limegreen;
 }
 
+footer a:hover {
+  color: greenyellow;
+}
+
 footer h2 {
   width: 20%;
   font-size: 20px;
@@ -366,23 +370,27 @@ footer ul {
   list-style: none;
 }
 
-footer a {
+#workTitle {
   color: limegreen;
+  text-align: center; 
+  font-size: 75px;
 }
 
 #work {
-  display: flex;
+  display: contents;
   flex: 4;
-  background-color: (lavender);
+  /* background-color: (lavender); */
   padding: 50px;
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: flex-start;
   margin: 0px 0px;
+  color: limegreen;
+  border-color: limegreen;
 }
 
 .grow {
+  width: 1200px;
   flex-direction: column;
   border-style: solid;
   border-width: 5px;
@@ -390,8 +398,8 @@ footer a {
   margin: 32px;
   flex: 0 0 300px;
   border-radius: 25px;
-  background-color: purple;
-  box-shadow: 10px 5px 5px #13293d;
+  /* background-color: purple; */
+  box-shadow: 10px 5px 5px green;
 }
 
 @media screen and (max-width: 1180px) {

@@ -64,14 +64,14 @@ function Projects() {
   console.log("projects");
   return (
     <section id="portfolio">
-      <h2>Work</h2>
+      <h2 id="workTitle">Projects</h2>
       <div id="work">
-        <Project
+        {/* <Project
           name="Horiseon"
           link="https://zacharyfeltman.github.io/horiseon/"
           image={process.env.PUBLIC_URL + "/img/horiseon.png"}
           repo="https://github.com/ZacharyFeltman/horiseon"
-        />
+        /> */}
         <Project
           name="Middle-Where"
           link="https://limitless-temple-38712.herokuapp.com/?"
@@ -84,18 +84,18 @@ function Projects() {
           image={process.env.PUBLIC_URL + "/img/pour-loser.png"}
           repo="https://github.com/ZacharyFeltman/pour-loser-game"
         />
-        <Project
+        {/* <Project
           name="Note Taker"
           link="https://detailed-note-taker.herokuapp.com/"
           image={process.env.PUBLIC_URL + "/img/note-taker.png"}
           repo="https://github.com/ZacharyFeltman/detailed-note-taker"
-        />
-        <Project
+        /> */}
+        {/* <Project
           name="Weather Tracker"
           link="https://zacharyfeltman.github.io/weekly-weather-forecast/"
           image={process.env.PUBLIC_URL + "/img/weather.jpeg"}
-          repo="https://github.com/ZacharyFeltman/weekly-weather-forecast-1"
-        />
+          repo="https://github.com/ZacharyFeltman/weekly-weather-forecast-1" 
+      /> */}
         <Project
           name="Random Password Generator"
           link="https://zacharyfeltman.github.io/random-password/"
