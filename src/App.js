@@ -137,10 +137,7 @@ function Resume() {
     <section class="resume-profs">
       <div id="resume">
         <h2 class="title">Resume</h2>
-        {/* <iframe src={process.env.PUBLIC_URL + "/resume.pdf"} /> */}
-        <object data="/resume.pdf" type="application/pdf">
-        <div>No online PDF viewer installed</div>
-    </object>
+        <iframe src={process.env.PUBLIC_URL + "/resume-feltman.pdf"} />
       </div>
       <div class="profs">
         <h2 class="title">Proficiencies</h2>
