@@ -47,13 +47,26 @@ function About() {
           />
         </p>
         <p id="about-text">
-          Hello! My name is Zachary Feltman. I grew up in suburb of Chicago
-          called Buffalo Grove and moved to Colorado in 2013. I graduated from
-          The University of Illinois with a bachelors in Psychology and a minor
-          in Cinema Studies. I moved to Colorado for an internship in Music
-          Management, where I worked as an agent assistant. I have been in the
-          service industry for the last 15 years and was ready for a change. I
-          am excited to learn to code and build my portfolio through this class.
+          Hello! I’m Zach Feltman, a full-stack web developer with a focus on
+          user experience. 
+          <br></br>
+          <br></br>
+          I attended The University of Illinois, and received a
+          degree in Psychology. I have recently graduated from Denver
+          University’s full-stack bootcamp program. Prior to DU, my experience
+          has been in the service industry doing everything from server to
+          management, and sales for a distillery. I found new interest and
+          excitement in the web development world using my creativity and
+          problem solving skills to design pages, work with user experience, and
+          work with data on the back end of applications. It may be new to me,
+          but I have been able to hit the ground running and grow my
+          proficiencies in multiple different languages such as CSS, JS, React,
+          MySql, MongoDB, and NodeJS. 
+          <br></br>
+          <br></br>
+          When I am not working, I enjoy seeing live
+          music around Colorado, camping in the summer, getting to the movies,
+          and trying new restaurants around town.
         </p>
       </section>
     </section>
@@ -124,10 +137,10 @@ function Resume() {
     <section class="resume-profs">
       <div id="resume">
         <h2 class="title">Resume</h2>
-        <iframe src={process.env.PUBLIC_URL + "/resume.pdf"} />
-        {/* <a href={process.env.PUBLIC_URL + "/resume.pdf"} target="_blank">
-          View Resume
-        </a> */}
+        {/* <iframe src={process.env.PUBLIC_URL + "/resume.pdf"} /> */}
+        <object data="/resume.pdf" type="application/pdf">
+        <div>No online PDF viewer installed</div>
+    </object>
       </div>
       <div class="profs">
         <h2 class="title">Proficiencies</h2>
@@ -142,13 +155,17 @@ function Resume() {
             <i class="fa-brands fa-react fa-5x" title="react"></i>
           </div>
           <div>
-            <img src="/img/mongodb.png" alt="mongodb" title="mongodb"/>
+            <img src="/img/mongodb.png" alt="mongodb" title="mongodb" />
           </div>
           <div>
             <img src="/img/mysql.png" alt="mysql" title="mysql" />
           </div>
           <div>
-            <img src="/img/handlebars-js.png" alt="handlebars" title="handlebars" />
+            <img
+              src="/img/handlebars-js.png"
+              alt="handlebars"
+              title="handlebars"
+            />
           </div>
         </div>
       </div>
