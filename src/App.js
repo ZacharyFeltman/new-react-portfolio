@@ -101,7 +101,9 @@ function Projects() {
           image={process.env.PUBLIC_URL + "/img/pour-loser.png"}
           repo="https://github.com/ZacharyFeltman/pour-loser-game"
           info="Pour Loser is a web application game for lovers of bar trivia.  This application combines the knowledge of Jeopardy trivia with the information to learn how to create your own fun cocktails at home.  Users are prompted with questions pulled from a free Jeopardy API.  The goal of this game is to get as many correct answers as you can in a row.  Once the user answers a question incorrectly, they will be presented with a new cocktail, the ingredients necessary, and instructions on how to create the cocktail at home.
-
+          
+          As a fan of trivia combined with my history in the service industry, we wanted to bring the fun of bar trivia to the individual combined with the ability to build their own bar book and learn how to enjoy new cocktails. 
+          
           This game was a team effort, but I personally worked on the HTML layout and CSS design for this game.  Anything from the display, to the answer forms, to scaling was worked on by me and my design partner David in this project.
           "
         />
